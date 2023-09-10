@@ -83,11 +83,11 @@ import Home from './components/layout.component/home.component/home.component';
 import Header from './components/header.component/header.component';
 import Trailer from './components/trailer.component/trailer.component';
 import Reviews from './components/reviews.component/reviews.component';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const [movies, setMovies] = useState([]);
   const [movie, setMovie] = useState();
   const [reviews, setReviews] = useState([]); // Initialize as an empty array
@@ -117,7 +117,7 @@ function App() {
 
   useEffect(() => {
     getMovies();
-    history.push('/home');
+    navigate('/home');
   }, []);
 
   return (
