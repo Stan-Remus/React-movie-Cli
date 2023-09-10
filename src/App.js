@@ -70,7 +70,7 @@
 
 //       </Routes>
 //     </div>
-//   );
+//   )
 // }
 
 // export default App;
@@ -115,6 +115,7 @@ function App() {
 
   useEffect(() => {
     getMovies();
+    history.push('/home');
   }, []);
 
   return (
