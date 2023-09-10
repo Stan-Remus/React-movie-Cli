@@ -19,8 +19,6 @@ const Reviews = ({getMovieData, movie, reviews, setReviews, test}) => {
     useEffect(() => {
         getMovieData(movieId);
         testFunction(movieId);
-        console.log("test data:", test)
-        console.log("pe bune unde?",reviews)
     }, [test])
 
     
@@ -29,9 +27,7 @@ const Reviews = ({getMovieData, movie, reviews, setReviews, test}) => {
 
         try{
             const response = await api.get(`/api/v1/movies/${movieId}`);
-            console.log("new TestFunction: ",response.data);
             setTestFun(response.data);
-            console.log("hete is testFun: ",testFun);
             
         }catch(error){
             console.log(error)
