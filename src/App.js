@@ -122,7 +122,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/home" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route path="/home" element={<Home movies={movies} />} ></Route>
           <Route path='/Trailer/:ytTrailerId' element={<Trailer />}></Route>
           <Route path='/Reviews/:movieId' element={<Reviews getMovieData={getMovieData} movie={movie} reviews={reviews} setReviews={setReviews} test={test} />} />
