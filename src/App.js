@@ -115,7 +115,6 @@ function App() {
 
   useEffect(() => {
     getMovies();
-    history.push('/home');
   }, []);
 
   return (
